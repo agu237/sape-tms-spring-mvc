@@ -56,6 +56,10 @@ public class Employee {
 		return result;
 	}
 
+	public Employee() {
+
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -14,15 +14,15 @@
 			<c:out value="${requestScope.status}"></c:out>
 		</p>
 	</c:if>
-	<form:form action="./SignIn" method="post" commandName="employee">
+	<form:form action="./SignInCheck" method="post" commandName="employee">
 	    <form:label path="id">Employee ID:</form:label> 
 		<form:input type="number" path="id" /><br>
 		
 		<form:label path="password">Password:</form:label> 
 		<form:input type="password" path="password" /> 
 		
-		<input type="submit" path="Submit"/> 
-			<a href="${pageContext.request.contextPath }/HomeView.jsp">Go back</a>
+		<input type="submit" value="Submit"/> 
+			<a href="GoBack">Go back</a>
 	</form:form>
 </body>
 </html>

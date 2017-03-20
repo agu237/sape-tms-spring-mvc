@@ -7,6 +7,14 @@ public class Request {
 	
 	private Employee employee;
 	private String status;
+	
+	
+	
+
+	public Request() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public Request(Employee employee, String status) {
 		this.employee = employee;
@@ -28,6 +36,7 @@ public class Request {
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
 	}
+	
 
 	@Override
 	public int hashCode() {

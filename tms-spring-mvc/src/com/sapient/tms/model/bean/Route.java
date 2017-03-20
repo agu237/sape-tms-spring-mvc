@@ -7,6 +7,13 @@ public class Route {
 	private String name;
 	private int id;
 	DropList dropList = new DropList();
+	
+	
+
+	public Route() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getName() {
 		return name;

@@ -4,13 +4,9 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Map;
 
-import javax.servlet.ServletException;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sapient.tms.helper.EmployeeAuthenticator;
@@ -21,22 +17,28 @@ import com.sapient.tms.model.bl.CentralLogic;
 
 @Controller
 public class SignInController {
-	private static final long serialVersionUID = 1L;
+
 	private CentralLogic centralLogic = new CentralLogic();
-	private Employee employee = new Employee();
+
 	boolean isValidEmployee;
 
-	@RequestMapping("/SignInCheck")
+	@RequestMapping("/signInCheck")
 	public ModelAndView signInCheck(@ModelAttribute("employee") Employee employee) throws IOException {
 		ModelAndView mv = new ModelAndView("accounts/SignInForm");
+		// System.out.println(employee);
+
 		try {
-			
+			// Get parameters from request object
+			// ModelAndView mv = new ModelAndView("accounts/SignIn");
+			// Attempt to authenticate user details
 			EmployeeAuthenticator authenticator = new EmployeeAuthenticator();
+			// System.out.println(employee.getId());
 			Map.Entry<Employee, Boolean> authenticationResult = authenticator.authenticate(employee.getId(),
 					employee.getPassword());
 			isValidEmployee = authenticationResult.getValue();
 			// If authentication fails
 			if (!isValidEmployee) {
+				System.out.println(employee);
 				mv.addObject("status", "Invalid UserID Or Password");
 				return mv;
 			}
@@ -85,7 +87,7 @@ public class SignInController {
 				}
 			}
 		} catch (ClassNotFoundException | SQLException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return mv;

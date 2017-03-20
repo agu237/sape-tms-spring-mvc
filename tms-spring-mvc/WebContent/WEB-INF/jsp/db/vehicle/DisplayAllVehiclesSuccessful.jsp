@@ -8,7 +8,7 @@
 <title>Display all vehicles successful</title>
 </head>
 <body>
-	<h3>Result</h3>
+	<h3>Full Data</h3>
 	<table>
 		<tr>
 			<th>ID</th>
@@ -17,7 +17,7 @@
 			<th>Capacity</th>
 		</tr>
 		<tr>
-			<c:forEach var="item" items="${requestScope.vehicles}">
+			<c:forEach var="item" items="${vehicles}">
 				<tr>
 					<td>${item.getId() }</td>
 					<td>${item.getModelName() }</td>
@@ -27,6 +27,6 @@
 			</c:forEach>
 		</tr>
 	</table>
-	<a href="${pageContext.request.contextPath }/AdminHomeView.jsp">Go back</a>
+	<a href=./AdminHomeView>Go back</a>
 </body>
 </html>

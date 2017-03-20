@@ -8,6 +8,13 @@ public class Ride {
 	LocalTime pickupTime;
 	LocalTime dropTime;
 	int seatsAllocated;
+	
+	
+
+	public Ride() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public Route getRoute() {
 		return route;

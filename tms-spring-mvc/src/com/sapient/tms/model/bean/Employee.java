@@ -6,6 +6,8 @@ public class Employee {
 	private String name;
 	private Ride ride;
 	private boolean isAdmin;
+	
+	
 
 	public Employee(int id, String pass, String name, Ride ride, boolean isAdmin) {
 		super();
@@ -15,6 +17,8 @@ public class Employee {
 		this.ride = ride;
 		this.isAdmin = isAdmin;
 	}
+	
+	
 
 	public String getPassword() {
 		return password;
@@ -46,6 +50,14 @@ public class Employee {
 
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setAdmin(boolean isAdmin) {
+		this.isAdmin = isAdmin;
 	}
 
 	@Override

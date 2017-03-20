@@ -22,7 +22,7 @@
 		<form:input type="password" path="password" /> 
 		
 		<input type="submit" value="Submit"/> 
-			<a href="GoBack">Go back</a>
+			<a href=./GoBack>Go back</a>
 	</form:form>
 </body>
 </html>

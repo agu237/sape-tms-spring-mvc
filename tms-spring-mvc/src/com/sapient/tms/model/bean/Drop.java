@@ -4,6 +4,13 @@ public class Drop {
 
 	private int id;
 	private String name;
+	
+	
+
+	public Drop() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public Drop(int id, String name) {
 		super();
@@ -48,6 +55,10 @@ public class Drop {
 
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

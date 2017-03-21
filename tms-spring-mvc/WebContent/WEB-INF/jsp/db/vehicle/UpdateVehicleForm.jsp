@@ -9,7 +9,8 @@
 <body>
 	<h1>Update Vehicle</h1>
 	<form action="${pageContext.request.contextPath}/UpdateVehicle" method="post">
-		ID: <input type="text" name="id" required /><br>
+		 <form:label path="id">
+		 <form:input type="text" path="id" required /><br>
 		Model Name: <input type="text" name="modelName" required /><br>
 		Brand Name: <input type="text" name="brandName" required /><br>
 		Capacity: <input type="number" name="capacity" required /><br>

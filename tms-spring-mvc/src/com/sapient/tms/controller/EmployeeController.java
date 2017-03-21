@@ -1,7 +1,5 @@
 package com.sapient.tms.controller;
 
-public class SignOutController {
-	
-	
+public class EmployeeController {
 
 }
